@@ -38,7 +38,14 @@ class Challenges
         Console.WriteLine("If there are 5 chickens, 12 cows, and 9 pigs, then there are " + animals(5, 12, 9) + " total legs");
         Console.WriteLine("The football team had 11 wins, 2 draws, and 3 losses, so the team has points" + footballPoints(11, 2, 3));
         Console.WriteLine("This month is " + monthName(12));
-        Console.WriteLine("The min and max for the array 8, 73, -32, 73221, 404 is " + findMinMax(8, 73, -32, 73221, 404));
+        int[] minMax = { 12, -77, 555, 89 };
+        Console.WriteLine("The max for the array 12, -77, 555, 89 is " + findMinMax(minMax));
+        int[] numbers { 2, 34, -22, 7, -1 };
+        Console.WriteLine("The sum of the absolute values of 2, 34, -22, 7, -1 is " + getAbsSum(numbers));
+        Console.WriteLine(" The base number 6 multiplied by the exponent 4 has a product of " + calculateExponent(6, 4);
+        int[] lengths = { 0, 11, -9, 12, 5 };
+        Console.WriteLine("The array 0, 11, -9, 12, 5 multiplied by the length gives the new array " + MulitplyByLength(lengths));
+        Console.WriteLine("The hamming distance for the line abcdefgg and abcdefgh is " + HammingDistance("abcdefgg", "abcdefgh"));
     }
 
     public static int Converter(int minute)
@@ -177,9 +184,61 @@ class Challenges
         return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(m);
     }
 
-    public static string findMinMax 
+    public static int findMinMax(int[] a)
     {
-        
+        int b = a.Min();
+        int c = a.Max();
+        Console.WriteLine("This min is " + b);
+        return c;
     }
+
+    public static int getAbsSum(int[] absNumbers)
+    {
+        int a = Math.Abs(absNumbers[0]);
+        int b = Math.Abs(absNumbers[1]);
+        int c = Math.Abs(absNumbers[2]);
+        int d = Math.Abs(absNumbers[3]);
+        int e = Math.Abs(absNumbers[4]);
+        return a + b + c + d + e;
+    }
+
+    public static int calculateExponent(int b, int e)
+    {
+        return (int)math.Pow(b, e);
+    }
+
+    public static int MultiplyBylength(int[] l)
+    {
+        int a = l[0] * l.Length;
+        int b = l[1] * l.Length;
+        int c = l[2] * l.Length;
+        int d = l[3] * l.Length;
+        int e = l[4] * l.Length;
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        Console.WriteLine(c);
+        Console.WriteLine(d);
+        return e;
+    }
+
+    public static int MultiplyBylength(int[] l)
+    {
+        int count = 0;
+
+        if (first.Length > second.Length || first.Length < second.Length) { throw new ArgumentExpectation(); }
+        else if (first.Length == 0 || second.Length == 0) { count = 0; }
+        else if (first == second) { count = 0; }
+        else
+        {
+            for (int i = 0; i < firstLength; i++)
+            {
+                if (first[i] != second[i])
+                {
+                    count++;
+                }
+            }
+        }
+    }
+    return count;
 }
 
